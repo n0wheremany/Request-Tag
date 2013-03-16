@@ -3,17 +3,18 @@ Request-Tag
 
 Мега хак: Работаем с запросом
 
-Установка
-=========
+## Установка
 
 Открываем engine/classes/templates.class.php
 
 ищем:
+  	
   	$this->copy_template = $this->template;
 		
-		$this->template_parse_time += $this->get_real_time() - $time_before;
+	$this->template_parse_time += $this->get_real_time() - $time_before;
     
 вставляем выше
+  
   	if( strpos( $this->template, "{request=" ) !== false or strpos( $this->template, "[request=" ) !== false ) {		
 			preg_match_all("#[\\{\\[]request=['\"](.+?)['\"]#is",$this->template,$matchs,PREG_PATTERN_ORDER);
 			$matchs = ((isset($matchs[1]) and is_array($matchs[1]))?$matchs[1]:array());
