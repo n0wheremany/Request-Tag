@@ -42,3 +42,28 @@ Request-Tag
 		}
     
 Уставнока завершена.
+
+
+## Использование
+
+В любом шаблоне можно использовать:
+Для вывода глобального массива $_REQUEST: - debug тэг
+
+	{request}
+	
+Для получения данных из $_REQUEST
+Для вывода начения
+
+	{request=do}
+	
+или для вывода из массива
+
+	{request=do->some}
+	
+для проверки существования значения $_REQUEST[do][some]
+
+	[request=do->some][/request]
+	
+для проверки значения $_REQUEST[do][some] == myvalue
+
+	[request=do->some=myvalue][/request]
