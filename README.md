@@ -22,7 +22,6 @@ Request-Tag
 			foreach($matchs as $match){
 				$xx = explode('=',$match);
 				$vmatch = array(array_shift($xx),implode('=',$xx));
-				$vmatch = explode('=',$match);
 				$amatch = explode('->',$vmatch[0]);
 				$value = $_REQUEST;
 				foreach($amatch as $imatch)
