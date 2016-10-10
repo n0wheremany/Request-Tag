@@ -38,7 +38,7 @@ Request-Tag
 			}
 		}
 		if( strpos( $this->template, "{request}" ) !== false) {
-			$this->template = str_replace('{request}', var_export($_REQUEST), $this->template );
+			$this->template = str_replace('{request}', var_export($_REQUEST,true), $this->template );
 		}
     
 Уставнока завершена.
