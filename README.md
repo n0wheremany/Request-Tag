@@ -55,16 +55,16 @@ Request-Tag
 Для получения данных из $_REQUEST
 Для вывода начения
 
-	{request=do}
+	{request="do"}
 	
 или для вывода из массива
 
-	{request=do->some}
+	{request="do->some"}
 	
 для проверки существования значения $_REQUEST[do][some]
 
-	[request=do->some][/request]
+	[request="do->some"][/request]
 	
 для проверки значения $_REQUEST[do][some] == myvalue
 
-	[request=do->some=myvalue][/request]
+	[request="do->some=myvalue"][/request]
