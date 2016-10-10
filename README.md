@@ -20,6 +20,8 @@ Request-Tag
 			$matchs = ((isset($matchs[1]) and is_array($matchs[1]))?$matchs[1]:array());
 			$matchs = array_unique($matchs);
 			foreach($matchs as $match){
+				$xx = explode('=',$match);
+				$vmatch = array(array_shift($xx),implode('=',$xx));
 				$vmatch = explode('=',$match);
 				$amatch = explode('->',$vmatch[0]);
 				$value = $_REQUEST;
